@@ -7,42 +7,46 @@
     <title>Registration Page</title>
     <link rel="stylesheet" href="../css/Register.css">
 </head>
-<body >
-<form >
-   
-           
-    <div class="container">
-        <form id="form" action="/">
-            <h1>Registration</h1>
-            <div class="input-control">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="password">Password</label>
-                <input id="password"name="password" type="password">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="password2">Password again</label>
-                <input id="password2"name="password2" type="password">
-                <div class="error"></div>
-            </div>
-            <button type="submit">Sign Up</button>
-        </form>
+<body>
+    <!-- Main div code -->
+    <div id="main">
+    <div class="h-tag">
+    <h2>Register Your Account</h2>
     </div>
-       
-       
-    
-</form>
-
-
-</body>
+    <!-- create account div -->
+    <div class="login">
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+    <tr>
+    <td align="right">Enter Name :</td>
+    <td><input type="text" placeholder="Enter user here" id="t1" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Email ID :</td>
+    <td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Username :</td>
+    <td><input type="text" placeholder="Enter Username here" id="t3" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Confirm Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="t5" class="tb" /></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>
+    <input type="reset" value="Clear Form" id="res" class="btn" />
+    <input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+    </tr>
+    </table>
+    </div>
+    <!-- create account box ending here.. -->
+    </div>
+    <!-- Main div ending here... -->
+    </body>
 <script src="../js/Register.js"></script>
 </html>

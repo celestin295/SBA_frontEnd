@@ -1,24 +1,69 @@
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+function registration()
+{
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+    var name= document.getElementById("t1").value;
+    var email= document.getElementById("t2").value;
+    var uname= document.getElementById("t3").value;
+    var pwd= document.getElementById("t4").value;           
+    var cpwd= document.getElementById("t5").value;
+    
+    //email id expression code
+    var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+    var letters = /^[A-Za-z]+$/;
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-  validateInputs();
-});
-
-const setError = (element, message) => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector('.error');
-
-  errorDisplay.innerText = message;
-  inputControl.classList.add('error');
-  inputControl.classList.remove('success')
-}
-const isValidEmail = email => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
+    if(name=='')
+    {
+        alert('Please enter your name');
+    }
+    else if(!letters.test(name))
+    {
+        alert('Name field required only alphabet characters');
+    }
+    else if(email=='')
+    {
+        alert('Please enter your user email id');
+    }
+    else if (!filter.test(email))
+    {
+        alert('Invalid email');
+    }
+    else if(uname=='')
+    {
+        alert('Please enter the user name.');
+    }
+    else if(!letters.test(uname))
+    {
+        alert('User name field required only alphabet characters');
+    }
+    else if(pwd=='')
+    {
+        alert('Please enter Password');
+    }
+    else if(cpwd=='')
+    {
+        alert('Enter Confirm Password');
+    }
+    else if(!pwd_expression.test(pwd))
+    {
+        alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+    }
+    else if(pwd != cpwd)
+    {
+        alert ('Password not Matched');
+    }
+    else if(document.getElementById("t5").value.length < 6)
+    {
+        alert ('Password minimum length is 6');
+    }
+    else if(document.getElementById("t5").value.length > 12)
+    {
+        alert ('Password max length is 12');
+    }
+    else
+    {                                           
+           alert('Thank You for Registration & You are Redirecting to homepage');
+           // Redirecting to other page or webste code. 
+           window.location = "homepage.html"; 
+    }
 }
