@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to login page</title>
+    <link rel="stylesheet" href="../css/login.css">
+  
+</head>
+<body>
+ 
+   <div class="container">
+      <div class="logo">Log in</div>
+      <div class="login-item">
+        <form  action="../html/homepage.html" d="post" class="form form-login">
+         <!-- <form action="../html/homepage.html" class="login" >  -->
+          <div class="form-field">
+            <label class="user" for="login-username"><span class="hidden">Username</span></label>
+            <input id="login-username" type="text" class="form-input" placeholder="Username" required>
+          </div>
+    
+          <div class="form-field">
+            <label class="lock" for="login-password"><span class="hidden">Password</span></label>
+            <input id="login-password" type="password" class="form-input" placeholder="Password" required>
+          </div>
+    
+          <div class="form-field">
+            <input type="submit" value="Log in">
+           
+          </div>
+        
+         <p>------------------------- or -----------------------------------</p>
+         <div id="b2">
+         <a  href="../html/Register.html">Register</a>
+         </div>
+         <div id="b3">
+         <a href="../html/Forgot password.html">Forgot password?</a>
+         </div>
+   
+        </form>
+      </div>
+    </div>
+   <script src="../js/login.js"></script>
+</body>
+
+</html>
